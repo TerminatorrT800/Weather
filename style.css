@@ -1,0 +1,129 @@
+body {
+    position: relative;
+    left: 25%;
+    font-family: sans-serif;
+    margin-top: 100px;
+}
+
+.telo {
+    display: flex;
+    flex-direction: column;
+    border-radius: 50px;
+    height: 400px;
+    width: 1200px;
+    background-color: #009879;
+    border: solid #02614e;
+    align-items: center;
+    color: #ffffff;
+
+
+}
+
+.naslov {
+    font-family: sans-serif;
+    font-size: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+label {
+    font-family: sans-serif;
+    font-size: 25px;
+    margin-bottom: -20px;
+}
+
+form button,
+.dugmici button {
+    height: fit-content;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+p {
+    margin: 0;
+}
+
+.dugmici {
+    display: flex;
+    width: 1200px;
+    height: 100px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+button {
+    cursor: pointer;
+}
+
+input{
+    height: fit-content;
+    font-size: 18px;
+}
+
+
+table {
+    width: 1200px;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    text-align: left;
+  }
+
+thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+}
+
+tbody tr:last-of-type {
+    border-bottom: 5px solid #009879;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+.dayRow{
+    background-color: #f3f3f3;
+    border-bottom: 5px solid #dddddd;
+}
+
+.hourRow{
+    font-size: 14px;
+    padding: 10px 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+
+.stranice{
+    display: flex;
+    width: 1200px;
+    flex-direction: row;
+    padding: 20px 20px;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stranice button{
+    height: fit-content;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.clicked{
+    background-color: #dddddd;
+}
