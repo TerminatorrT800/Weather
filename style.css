@@ -1,6 +1,9 @@
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
-    left: 25%;
+    margin-left: auto;
     font-family: sans-serif;
     margin-top: 100px;
 }
@@ -9,8 +12,8 @@ body {
     display: flex;
     flex-direction: column;
     border-radius: 50px;
-    height: 400px;
-    width: 1200px;
+    height: 25%;
+    width: 70%;
     background-color: #009879;
     border: solid #02614e;
     align-items: center;
@@ -49,7 +52,7 @@ p {
 
 .dugmici {
     display: flex;
-    width: 1200px;
+    width: 70%;
     height: 100px;
     align-items: center;
     justify-content: space-around;
@@ -66,7 +69,7 @@ input{
 
 
 table {
-    width: 1200px;
+    width: 70%;
     border-collapse: collapse;
     margin: 20px 0;
     font-size: 16px;
@@ -110,7 +113,7 @@ tbody tr:hover {
 
 .stranice{
     display: flex;
-    width: 1200px;
+    width: 70%;
     flex-direction: row;
     padding: 20px 20px;
     gap: 20px;
@@ -126,4 +129,58 @@ tbody tr:hover {
 
 .clicked{
     background-color: #dddddd;
+}
+
+@media (max-width: 768px) {
+    body {
+        margin-top: 50px;
+        padding: 10px;
+    }
+
+    .telo {
+        width: 90%; /* Povećaj širinu na manje ekrane */
+        height: auto; /* Omogući dinamičnu visinu */
+        border-radius: 20px; /* Smanji zaobljenost */
+        padding: 20px; /* Dodaj unutrašnji razmak */
+    }
+
+    .naslov {
+        font-size: 30px; /* Smanji veličinu naslova */
+        text-align: center;
+    }
+
+    form {
+        gap: 20px; /* Smanji razmak između polja */
+    }
+
+    label {
+        font-size: 18px; /* Smanji veličinu fonta */
+    }
+
+    form button,
+    .dugmici button {
+        font-size: 16px; /* Prilagodi veličinu dugmića */
+    }
+
+    .dugmici {
+        flex-direction: column; /* Dugmići jedan ispod drugog */
+        height: auto;
+        gap: 10px; /* Razmak između dugmića */
+        width: 100%; /* Proširi ih preko celog ekrana */
+    }
+
+    table {
+        width: 100%; /* Prilagodi tabelu */
+        font-size: 14px; /* Smanji font */
+    }
+
+    .stranice {
+        flex-direction: column; /* Elementi jedan ispod drugog */
+        gap: 10px;
+        width: 100%;
+    }
+
+    .stranice button {
+        width: 100%; /* Dugmići preko cele širine */
+    }
 }
