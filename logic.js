@@ -160,9 +160,11 @@ function poSatuPrikaz() {
             })
             index++;
         })
-        addButtons(index)
+        removeButtons()  
+        addButtons(globalData.Days)
         clickPage()
         loadFirstPage();
+        console.log(globalData)
 
     }
     catch (error) {
@@ -239,14 +241,20 @@ function loadFirstPage(){
     buttons[0].click();
 }
 
-function addButtons(counter) {
+function addButtons(days) {
     const straniceDIV = document.querySelector('.stranice');
-    for (let i = 1; i < counter; i++) {
-        const BTN = document.createElement('button');
-        BTN.innerText = i;
-        BTN.id = i;
+    // for (let i = 1; i < counter; i++) {
+    //     const BTN = document.createElement('button');
+    //     BTN.innerText = i;
+    //     BTN.id = i;
+    //     straniceDIV.appendChild(BTN)
+    // }
+    days.forEach((day,index)=>{
+        const BTN = document.createElement('button')
+        BTN.innerText = day.Datetime.slice(5)
+        BTN.id = index + 1
         straniceDIV.appendChild(BTN)
-    }
+    })
 }
 
 function removeButtons(){
