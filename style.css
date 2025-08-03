@@ -90,6 +90,10 @@ td {
     border: 1px solid #dddddd;
 }
 
+tbody tr {
+    border-bottom: 3px solid #dddddd;
+}
+
 tbody tr:last-of-type {
     border-bottom: 5px solid #009879;
 }
@@ -101,7 +105,7 @@ tbody tr:hover {
 
 .dayRow {
     background-color: #f3f3f3;
-    border-bottom: 5px solid #dddddd;
+    border-bottom: 3px solid #dddddd;
 }
 
 .hourRow {
@@ -183,4 +187,19 @@ tbody tr:hover {
             width: 100%;
         }
     }
+}
+
+.hourRow {
+    display: none; 
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.hourRow.expanded {
+    max-height: 100px;
+    opacity: 1;
+    pointer-events: auto;
+    display: table-row;
 }
