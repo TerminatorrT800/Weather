@@ -2,6 +2,7 @@ const input = document.querySelector("#lokacija");
 const adress = document.querySelector("form p");
 const tableHead = document.querySelector("thead");
 const tableBody = document.querySelector("tbody");
+import "./style.css"; 
 
 let globalData;
 const cache = new Map();
@@ -102,7 +103,6 @@ function debounce(func, delay) {
 }
 
 const submitData = async (e) => {
-  e.preventDefault();
   let location = input.value.trim();
   const capitalizedLocation = location.split(" ").filter(word => word.trim() !== "").map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(" ");
   location = capitalizedLocation;
@@ -129,7 +129,7 @@ const submitData = async (e) => {
 
 const debouncedSubmit = debounce(submitData, 500);
 
-document.querySelector("form button").addEventListener("click", submitData);
+document.querySelector("form").addEventListener("submit", (e) => {e.preventDefault(); debouncedSubmit(e);});
 
 function renderTable() {
   try {
