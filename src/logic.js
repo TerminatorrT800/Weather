@@ -111,12 +111,13 @@ const submitData = async (e) => {
     return;
   }
   showLoading();
-  if (cache.has(location)) {
-    globalData = cache.get(location);
+  if (localStorage.getItem(location)) {
+    globalData = JSON.parse(localStorage.getItem(location));
   } else {
     try {
       globalData = await getWeather(location);
       cache.set(location, globalData);
+      localStorage.setItem(location, JSON.stringify(globalData));
     } catch (error) {
       hideLoading();
       console.error("Error fetching weather data:", error);
